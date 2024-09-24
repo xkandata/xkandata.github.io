@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wygrana!</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link do pliku CSS -->
+    <style>
+        body {
+            background-color: #F4C2C2; /* Pudrowy róż */
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            animation: flicker 1s infinite; /* Animacja migania */
+        }
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .content {
+            text-align: center;
+            margin-top: 20px; /* Odstęp od góry */
+        }
+        #movingCat {
+            position: absolute;
+            width: 90px; /* Szerokość kota */
+            height: auto; /* Automatyczna wysokość */
+            animation: moveCat 30s linear infinite; /* Animacja ruchu (prędkość zmniejszona) */
+        }
+        @keyframes moveCat {
+            0% { left: -90px; top: 50%; } /* Początek na lewym boku */
+            25% { left: calc(100% - 90px); top: 10%; } /* Górna część */
+            50% { left: calc(100% - 90px); top: calc(100% - 90px); } /* Dolna część */
+            75% { left: -90px; top: calc(100% - 90px); } /* Dolna część, wracając */
+            100% { left: -90px; top: 50%; } /* Środek */
+        }
+    </style>
+</head>
+<body>
+    <h1>Brawo! Jebać Pawła!</h1>
+    <div class="content">
+        <img src="images/dancing_cat.gif" alt="Dancing Cat" width="211" height="374">
+        <div style="margin-top: 20px;"></div> <!-- Odstęp -->
+        <img id="movingCat" src="images/cat.png" alt="Moving Cat">
+        <audio controls autoplay loop style="margin: 20px 0;"> <!-- Umożliwienie kontroli odtwarzania muzyki -->
+            <source src="images/muzyka.mp3" type="audio/mpeg"> <!-- Upewnij się, że ścieżka jest poprawna -->
+            Your browser does not support the audio element.
+        </audio>
+        <div style="margin-top: 20px;"></div> <!-- Odstęp -->
+        <img src="images/apple.png" alt="Apple" width="416" height="367">
+    </div>
+</body>
+</html>

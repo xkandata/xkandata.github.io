@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Domyślna czcionka */
+}
+
+.content {
+    text-align: center;
+    margin-top: 20px; /* Odstęp od góry */
+}
+
+img {
+    max-width: 100%; /* Obrazki będą responsywne */
+    height: auto; /* Automatyczna wysokość */
+}

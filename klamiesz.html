@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kłamiesz?</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Ustawienie elementów na górze */
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f8f8; /* Możesz zmienić tło */
+            padding-top: 10vh; /* Przesunięcie w górę o 10% */
+        }
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            display: flex;
+            gap: 20px; /* Odstęp między przyciskami */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+        #noButton {
+            background-color: gray; /* Przyciski są zablokowane */
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kłamiesz?</h1>
+    <div class="button-container">
+        <button onclick="window.location.href='wygrana.html'">Tak</button>
+        <button id="noButton" disabled>Nie</button>
+    </div>
+</body>
+</html>
+

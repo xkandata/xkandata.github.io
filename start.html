@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Czy jesteś szczęśliwa z Pawłem?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 20px;
+            cursor: pointer;
+        }
+        img {
+            max-width: 300px;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+        .container {
+            display: inline-block;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Czy jesteś szczęśliwa z Pawłem?</h1>
+
+    <!-- Sekcja "Tak" -->
+    <div class="container">
+        <button onclick="redirect('tak')">Tak</button>
+        <img src="images/smutna.jpg" alt="Smutna twarz" id="tak-img">
+    </div>
+
+    <!-- Sekcja "Nie" -->
+    <div class="container">
+        <button onclick="redirect('nie')">Nie</button>
+        <img src="images/wesola.jpg" alt="Wesoła twarz" id="nie-img">
+    </div>
+
+    <script>
+        function redirect(answer) {
+            if (answer === 'tak') {
+                window.location.href = "klamiesz.html"; // 
+            } else if (answer === 'nie') {
+                window.location.href = "wygrana.html"; // Przenosi do wygrana.html
+            }
+        }
+    </script>
+
+</body>
+</html>
